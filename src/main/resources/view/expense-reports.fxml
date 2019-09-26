@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<VBox prefHeight="400.0" prefWidth="827.0" spacing="5.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.ExpenseReportsController">
+   <styleClass>
+      <String fx:value="scene" />
+      <String fx:value="padding-5" />
+   </styleClass>
+   <children>
+      <HBox alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="191.0" prefWidth="651.0" spacing="5.0">
+               <children>
+                  <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="33.0" prefWidth="639.0" spacing="5.0">
+                     <children>
+                        <Label minWidth="-Infinity" prefWidth="42.0" styleClass="fw-500" text="Fleet Owner" wrapText="true" />
+                        <ChoiceBox fx:id="fleetOwnerChoiceBox" minWidth="130.0" prefHeight="27.0" HBox.hgrow="ALWAYS" />
+                        <Pane HBox.hgrow="ALWAYS" />
+                        <Label minWidth="-Infinity" prefWidth="50.0" styleClass="fw-500" text="Reg Number" wrapText="true" />
+                        <ChoiceBox fx:id="regNumberChoiceBox" minWidth="130.0" prefHeight="27.0" />
+                        <Pane layoutX="186.0" layoutY="10.0" HBox.hgrow="ALWAYS" />
+                        <Label minWidth="-Infinity" prefWidth="63.0" styleClass="fw-500" text="Expense Category" wrapText="true" />
+                        <ChoiceBox fx:id="expenseCategoryChoiceBox" minWidth="130.0" prefHeight="27.0" />
+                     </children>
+                  </HBox>
+                  <Accordion fx:id="datePickerAccordion" VBox.vgrow="ALWAYS">
+                     <panes>
+                        <TitledPane fx:id="datePickerPane" text="Range of Dates">
+                           <content>
+                              <HBox alignment="CENTER" spacing="5.0">
+                                 <children>
+                                    <Label styleClass="fw-500" text="Start Date" />
+                                    <DatePicker fx:id="startDate" prefWidth="150.0" promptText="dd-mm-yyyy" />
+                                    <Label styleClass="fw-500" text="End Date">
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <DatePicker fx:id="endDate" layoutX="388.0" layoutY="25.0" prefWidth="150.0" promptText="dd-mm-yyyy" />
+                                 </children>
+                              </HBox>
+                           </content>
+                        </TitledPane>
+                        <TitledPane prefHeight="1.0" prefWidth="202.0" text="Month and Year">
+                           <content>
+                              <HBox alignment="CENTER" prefHeight="49.0" spacing="5.0">
+                                 <children>
+                                    <Label styleClass="fw-500" text="Month" />
+                                    <ChoiceBox fx:id="monthChoiceBox" prefWidth="150.0" />
+                                    <Label styleClass="fw-500" text="Year">
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="yearField" prefWidth="150.0" />
+                                 </children>
+                              </HBox>
+                           </content>
+                        </TitledPane>
+                     </panes>
+                  </Accordion>
+                  <HBox alignment="CENTER" prefHeight="36.0" prefWidth="578.0" spacing="20.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#onGenerateReport" prefWidth="142.0" styleClass="btn-info-outline" text="Generate Report" />
+                        <Button mnemonicParsing="false" onAction="#onGenerateGraph" styleClass="btn-info-outline" text="Performance Graph" />
+                        <Button mnemonicParsing="false" onAction="#onExportReport" styleClass="btn-info-outline"
+                                text="Export To PDF" />
+                     </children>
+                  </HBox>
+               </children>
+               <styleClass>
+                  <String fx:value="border-accent" />
+                  <String fx:value="padding-5" />
+               </styleClass>
+            </VBox>
+         </children>
+      </HBox>
+      <Separator prefWidth="200.0" />
+      <VBox fx:id="reportContainer" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" VBox.vgrow="ALWAYS" />
+   </children>
+</VBox>

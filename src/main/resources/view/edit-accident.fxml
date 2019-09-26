@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="761.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.EditAccidentController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" VBox.vgrow="ALWAYS">
+         <styleClass>
+            <String fx:value="padding-5" />
+            <String fx:value="border-light-3" />
+         </styleClass>
+         <children>
+            <Label text="Record Accident">
+               <styleClass>
+                  <String fx:value="color-primary-dark" />
+                  <String fx:value="h6" />
+               </styleClass>
+            </Label>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="261.0" prefWidth="739.0" spacing="40.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <GridPane prefWidth="365.0" HBox.hgrow="ALWAYS">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.0" minWidth="0.0" prefWidth="139.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="251.0" minWidth="0.0" prefWidth="229.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ChoiceBox fx:id="regNumbersChoiceBox" prefHeight="27.0" prefWidth="251.0" GridPane.columnIndex="1" />
+                        <DatePicker fx:id="accidentDate" prefHeight="27.0" prefWidth="240.0" promptText="dd-mm-yyyy" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <ChoiceBox fx:id="hourPicker" prefWidth="150.0" />
+                              <ChoiceBox fx:id="minutePicker" layoutX="10.0" layoutY="10.0" prefWidth="150.0" />
+                              <ChoiceBox fx:id="timePeriodChoiceBox" layoutX="107.0" layoutY="10.0" prefWidth="150.0" />
+                           </children>
+                        </HBox>
+                        <TextField fx:id="place" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="policeStation" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                           <children>
+                              <Label text="Vehicle Reg. No." />
+                              <Label styleClass="required" text="*" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.rowIndex="1">
+                           <children>
+                              <Label text="Date of Accident" />
+                              <Label styleClass="required" text="*" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.rowIndex="2">
+                           <children>
+                              <Label text="Time of Accident" />
+                              <Label styleClass="required" text="*" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.rowIndex="3">
+                           <children>
+                              <Label text="Place of Accident" />
+                              <Label styleClass="required" text="*" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.rowIndex="4">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="34.0" prefWidth="86.0" text="Police Station Reported" wrapText="true" />
+                              <Label styleClass="required" text="*" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+                  <GridPane prefWidth="365.0" HBox.hgrow="ALWAYS">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.0" minWidth="10.0" prefWidth="146.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.0" minWidth="10.0" prefWidth="204.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                           <children>
+                              <Label text="Driver's Name" />
+                              <Label styleClass="required" text="*" />
+                           </children>
+                        </HBox>
+                        <ChoiceBox fx:id="driverChoiceBox" prefHeight="27.0" prefWidth="301.0" GridPane.columnIndex="1" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.rowIndex="1">
+                           <children>
+                              <Label text="Driver's ID" />
+                              <Label styleClass="required" text="*" />
+                           </children>
+                        </HBox>
+                        <TextField fx:id="driverId" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.rowIndex="2">
+                           <children>
+                              <Label text="Driver's License No." />
+                              <Label styleClass="required" text="*" />
+                           </children>
+                        </HBox>
+                        <TextField fx:id="driverLicense" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.rowIndex="3">
+                           <children>
+                              <Label prefHeight="34.0" prefWidth="104.0" text="Date Repoted to Insurance" wrapText="true" />
+                           </children>
+                        </HBox>
+                        <DatePicker fx:id="insuranceReportDate" prefHeight="27.0" prefWidth="248.0" promptText="dd-mm-yyyy" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="578.0">
+               <children>
+                  <Label text="Brief Description: " />
+                  <TextField fx:id="description" prefHeight="27.0" prefWidth="477.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="578.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onCancel" styleClass="btn" text="Cancel" />
+                  <Pane HBox.hgrow="ALWAYS" />
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onSave" styleClass="btn-success" text="Save Details" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <styleClass>
+      <String fx:value="scene" />
+      <String fx:value="padding-5" />
+   </styleClass>
+</VBox>

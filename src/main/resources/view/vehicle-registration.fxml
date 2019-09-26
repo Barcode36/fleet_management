@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+
+<ScrollPane fx:id="container" fitToWidth="true" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.VehicleRegistrationController">
+   <content>
+      <VBox alignment="TOP_CENTER" spacing="5.0" stylesheets="@../css/style.css">
+         <children>
+            <Label text="Vehicle Registration Form">
+               <styleClass>
+                  <String fx:value="h5" />
+                  <String fx:value="color-info-dark" />
+               </styleClass>
+            </Label>
+            <Separator prefWidth="200.0" />
+            <VBox alignment="TOP_CENTER" fillWidth="false" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefWidth="900.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="430.0" spacing="20.0" styleClass="padding-5">
+                           <children>
+                              <Button id="Insurance Certificate" fx:id="uploadInsuranceCert" mnemonicParsing="false" text="Upload Insurance Certificate" />
+                              <Button id="Log Book" fx:id="uploadLogBookBtn" mnemonicParsing="false" text="Upload Log Book" />
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                        <HBox prefHeight="349.0" prefWidth="1176.0" spacing="10.0">
+                           <children>
+                              <VBox alignment="TOP_CENTER" spacing="5.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Vehicle Details" underline="true">
+                                       <styleClass>
+                                          <String fx:value="color-primary-dark" />
+                                          <String fx:value="fw-500" />
+                                          <String fx:value="h6" />
+                                       </styleClass>
+                                    </Label>
+                                    <GridPane vgap="10.0" VBox.vgrow="ALWAYS">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="209.0" minWidth="10.0" prefWidth="156.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="288.0" minWidth="10.0" prefWidth="276.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="3.0">
+                                             <children>
+                                                <Label text="Fleet Owner" />
+                                                <Label styleClass="required" text="*" />
+                                             </children>
+                                          </HBox>
+                                          <ChoiceBox fx:id="fleetOwnerChoiceBox" prefHeight="26.0" prefWidth="292.0" GridPane.columnIndex="1" />
+                                          <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="174.0" spacing="3.0" GridPane.rowIndex="1">
+                                             <children>
+                                                <Label text="Fleet Category" />
+                                                <Label styleClass="required" text="*" />
+                                             </children>
+                                          </HBox>
+                                          <ChoiceBox fx:id="fleetCategoryChoiceBox" prefHeight="28.0" prefWidth="298.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.rowIndex="2">
+                                             <children>
+                                                <Label text="Type" />
+                                                <Label styleClass="required" text="*" />
+                                             </children>
+                                          </HBox>
+                                          <ChoiceBox fx:id="vehicleTypeChoiceBox" prefHeight="26.0" prefWidth="288.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.rowIndex="3">
+                                             <children>
+                                                <Label text="Make" />
+                                                <Label styleClass="required" text="*" />
+                                             </children>
+                                          </HBox>
+                                          <ChoiceBox fx:id="vehicleMakeChoiceBox" prefHeight="28.0" prefWidth="313.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <Label text="Model" GridPane.rowIndex="4" />
+                                          <TextField fx:id="model" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                                          <Label text="Number of Seats" GridPane.rowIndex="5" />
+                                          <TextField fx:id="numSeats" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.rowIndex="6">
+                                             <children>
+                                                <Label text="Registration No." />
+                                                <Label styleClass="required" text="*" />
+                                             </children>
+                                          </HBox>
+                                          <TextField fx:id="editRegNumber" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+                                          <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="427.0" spacing="5.0" GridPane.rowIndex="7">
+                                             <children>
+                                                <Label text="Registration Date" />
+                                                <Label styleClass="required" text="*" />
+                                             </children>
+                                          </HBox>
+                                          <DatePicker fx:id="regDate" prefHeight="28.0" prefWidth="324.0" promptText="dd-mm-yyyy" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="padding-5" />
+                                    <String fx:value="border-light-3" />
+                                    <String fx:value="bg-light" />
+                                 </styleClass>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Insurance" underline="true">
+                                       <styleClass>
+                                          <String fx:value="color-primary-dark" />
+                                          <String fx:value="fw-500" />
+                                          <String fx:value="h6" />
+                                       </styleClass>
+                                    </Label>
+                                    <GridPane vgap="10.0" VBox.vgrow="ALWAYS">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.0" minWidth="10.0" prefWidth="160.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="273.0" minWidth="10.0" prefWidth="259.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="3.0">
+                                             <children>
+                                                <Label text="Insurance Company" wrapText="true" />
+                                                <Label layoutX="10.0" layoutY="24.0" styleClass="required" text="*" />
+                                             </children>
+                                          </HBox>
+                                          <ChoiceBox fx:id="insuranceCompanyChoiceBox" prefHeight="26.0" prefWidth="277.0" GridPane.columnIndex="1" />
+                                          <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="427.0" spacing="5.0" GridPane.rowIndex="1">
+                                             <children>
+                                                <Label text="Policy Type" />
+                                                <Label styleClass="required" text="*" />
+                                             </children>
+                                          </HBox>
+                                          <ChoiceBox fx:id="policyTypeChoiceBox" prefHeight="26.0" prefWidth="310.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                                          <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="427.0" spacing="5.0" GridPane.rowIndex="2">
+                                             <children>
+                                                <Label text="Policy Number" />
+                                                <Label styleClass="required" text="*" />
+                                             </children>
+                                          </HBox>
+                                          <TextField fx:id="policyNumber" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                                          <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="427.0" spacing="5.0" GridPane.rowIndex="3">
+                                             <children>
+                                                <Label text="Policy Start Date " />
+                                                <Label styleClass="required" text="*" />
+                                             </children>
+                                          </HBox>
+                                          <DatePicker fx:id="policyStartDatePicker" prefHeight="28.0" prefWidth="293.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="427.0" spacing="5.0" GridPane.rowIndex="4">
+                                             <children>
+                                                <Label text="Policy Expiry Date" />
+                                                <Label styleClass="required" text="*" />
+                                             </children>
+                                          </HBox>
+                                          <DatePicker fx:id="policyExpiryDatePicker" prefHeight="28.0" prefWidth="334.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <TextField fx:id="premiumAmount" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.rowIndex="5">
+                                             <children>
+                                                <Label text="Premium Amount" />
+                                                <Label styleClass="required" text="*" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="border-light-3" />
+                                    <String fx:value="padding-5" />
+                                    <String fx:value="bg-light" />
+                                 </styleClass>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox spacing="10.0">
+                           <children>
+                              <VBox alignment="TOP_CENTER" spacing="5.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Services" underline="true">
+                                       <styleClass>
+                                          <String fx:value="fw-500" />
+                                          <String fx:value="color-primary-dark" />
+                                          <String fx:value="h6" />
+                                       </styleClass>
+                                    </Label>
+                                    <GridPane prefHeight="180.0" vgap="10.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Label text="Last Annual Inspection" wrapText="true" />
+                                          <DatePicker fx:id="inspectionDatePicker" prefHeight="28.0" prefWidth="281.0" GridPane.columnIndex="1" />
+
+                                          <Label text="Last Servicing Date" GridPane.rowIndex="1" />
+                                          <DatePicker fx:id="servicingDatePicker" prefHeight="28.0" prefWidth="278.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                                          <Label prefHeight="83.0" prefWidth="214.0" text="Last Speed Governor Renewal" wrapText="true" GridPane.rowIndex="2" />
+                                          <DatePicker fx:id="speedGovRenewalDatePicker" prefHeight="28.0" prefWidth="281.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                                          <Label text="Last NTSA License Renewal" wrapText="true" GridPane.rowIndex="3" />
+                                          <DatePicker fx:id="licenseRenewalDatePicker" prefHeight="28.0" prefWidth="279.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="209.0" minWidth="10.0" prefWidth="153.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="275.0" minWidth="10.0" prefWidth="272.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="border-light-3" />
+                                    <String fx:value="padding-5" />
+                                    <String fx:value="bg-light" />
+                                 </styleClass>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Other Details" underline="true">
+                                       <styleClass>
+                                          <String fx:value="fw-500" />
+                                          <String fx:value="color-primary-dark" />
+                                          <String fx:value="h6" />
+                                       </styleClass>
+                                    </Label>
+                                    <GridPane vgap="10.0">
+                                       <children>
+                                          <Label text="Purchased on Loan?" GridPane.rowIndex="1" />
+                                          <TextField fx:id="cost" prefHeight="26.0" prefWidth="256.0" GridPane.columnIndex="1" />
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <children>
+                                                <RadioButton fx:id="onLoan" mnemonicParsing="false" text="Yes" />
+                                                <RadioButton fx:id="notOnLoan" mnemonicParsing="false" text="No" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                                             <children>
+                                                <Label text="Cost of Vehicle" />
+                                                <Label styleClass="required" text="*" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="209.0" minWidth="10.0" prefWidth="167.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="275.0" minWidth="10.0" prefWidth="255.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="padding-5" />
+                                    <String fx:value="border-light-3" />
+                                    <String fx:value="bg-light" />
+                                 </styleClass>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                        <HBox alignment="CENTER_RIGHT" prefHeight="53.0" prefWidth="888.0">
+                           <children>
+                              <Button minHeight="30.0" mnemonicParsing="false" onAction="#onSaveDetails" prefWidth="280.0" styleClass="btn-success" text="Save Details" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <styleClass>
+                        <String fx:value="padding-5" />
+                        <String fx:value="border-light-2" />
+                     </styleClass>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+         <styleClass>
+            <String fx:value="scene" />
+            <String fx:value="padding-5" />
+         </styleClass>
+      </VBox>
+   </content>
+</ScrollPane>

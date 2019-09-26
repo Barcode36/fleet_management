@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<VBox fx:id="container" alignment="CENTER" fillWidth="false" prefHeight="444.0" prefWidth="717.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.RemindersController">
+   <children>
+      <VBox prefHeight="444.0" prefWidth="800.0" spacing="5.0" VBox.vgrow="ALWAYS">
+         <styleClass>
+            <String fx:value="padding-5" />
+            <String fx:value="scene" />
+            <String fx:value="border-light-3" />
+         </styleClass>
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="590.0" spacing="5.0">
+               <children>
+                  <Label text="Category" />
+                  <ChoiceBox fx:id="categoryChoiceBox" />
+                  <Pane HBox.hgrow="ALWAYS" />
+                  <Button fx:id="settingsBtn" mnemonicParsing="false" styleClass="btn-info" text="Settings" />
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <TableView fx:id="tableView" prefHeight="225.0" prefWidth="590.0" VBox.vgrow="ALWAYS">
+              <columns>
+                  <TableColumn fx:id="regNumber" prefWidth="75.0" text="Reg Number" />
+                <TableColumn fx:id="reminder" prefWidth="75.0" text="Reminder" />
+                <TableColumn fx:id="dueDate" prefWidth="75.0" text="Due Date" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+   <styleClass>
+      <String fx:value="scene" />
+      <String fx:value="padding-5" />
+   </styleClass>
+</VBox>

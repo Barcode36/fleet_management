@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import java.lang.*?>
+<VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="323.0" prefWidth="401.0" spacing="5.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.LoginController">
+   <children>
+      <Label text="QUANTUM">
+         <styleClass>
+            <String fx:value="h2" />
+            <String fx:value="fw-500" />
+            <String fx:value="color-accent" />
+         </styleClass>
+      </Label>
+      <Label styleClass="color-accent" text="Fleet Management System" />
+      <Separator prefWidth="226.0" />
+      <Pane prefHeight="13.0" prefWidth="200.0" />
+      <Label styleClass="color-white" text="Login to get started">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Pane layoutX="111.0" layoutY="111.0" prefHeight="5.0" prefWidth="200.0" />
+      <TextField fx:id="userNameField" prefHeight="27.0" prefWidth="226.0" promptText="login name" />
+      <Pane prefHeight="4.0" prefWidth="200.0" />
+      <PasswordField fx:id="passwordField" onAction="#loginUser" prefHeight="27.0" prefWidth="226.0" promptText="password" />
+      <Pane prefHeight="36.0" prefWidth="200.0" />
+      <Button mnemonicParsing="false" onAction="#loginUser" prefHeight="27.0" prefWidth="226.0" text="Login">
+         <styleClass>
+            <String fx:value="color-white" />
+            <String fx:value="bg-accent" />
+            <String fx:value="fw-500" />
+         </styleClass>
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+   </children>
+   <styleClass>
+      <String fx:value="bg-primary-dark" />
+      <String fx:value="scene" />
+   </styleClass>
+</VBox>

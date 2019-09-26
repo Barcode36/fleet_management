@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="474.0" prefWidth="700.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.AssignVehiclesController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" VBox.vgrow="ALWAYS">
+         <styleClass>
+            <String fx:value="padding-5" />
+            <String fx:value="border-light-3" />
+         </styleClass>
+         <children>
+            <Label text="Assign Employees">
+               <styleClass>
+                  <String fx:value="fw-500" />
+                  <String fx:value="h6_5" />
+                  <String fx:value="color-primary-dark" />
+               </styleClass>
+            </Label>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="528.0" spacing="5.0">
+               <children>
+                  <Label styleClass="fw-500" text="Select Date : " />
+                  <DatePicker fx:id="datePicker" promptText="dd-mm-yyyy" />
+                  <Button mnemonicParsing="false" onAction="#onSearch" styleClass="btn-info-outline" text="Search " />
+                  <Pane HBox.hgrow="ALWAYS" />
+                  <Label styleClass="fw-500" text="Reg No." />
+                  <TextField fx:id="regNumberField" />
+               </children>
+            </HBox>
+            <TableView fx:id="tableView" editable="true" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn fx:id="regNumber" prefWidth="75.0" text="Reg. No." />
+                <TableColumn fx:id="driver" prefWidth="75.0" text="Driver" />
+                  <TableColumn fx:id="conductor" prefWidth="75.0" text="Conductor" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <HBox alignment="CENTER_RIGHT">
+               <children>
+                  <Button fx:id="saveButton" mnemonicParsing="false" onAction="#onSaveAssignments" styleClass="btn-success" text="Save Assignments" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <styleClass>
+      <String fx:value="scene" />
+      <String fx:value="padding-5" />
+   </styleClass>
+</VBox>

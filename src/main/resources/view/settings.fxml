@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<VBox prefHeight="400.0" prefWidth="600.0" spacing="5.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.SettingsController">
+   <styleClass>
+      <String fx:value="scene" />
+      <String fx:value="padding-5" />
+   </styleClass>
+   <children>
+      <HBox alignment="CENTER">
+         <children>
+            <Label styleClass="h6" text="Application Settings" />
+         </children>
+      </HBox>
+      <Separator prefWidth="200.0" />
+      <Label text="Reminders">
+         <styleClass>
+            <String fx:value="color-accent" />
+            <String fx:value="fw-500" />
+         </styleClass>
+      </Label>
+      <Accordion fx:id="accordion" VBox.vgrow="ALWAYS">
+        <panes>
+          <TitledPane animated="false" text="Insurance Renewal">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="27.0" prefWidth="566.0" spacing="5.0">
+                           <children>
+                              <Label text="Remind " />
+                              <TextField fx:id="insuranceTextField" prefHeight="26.0" prefWidth="135.0" />
+                              <ChoiceBox fx:id="insuranceTimeUnitChoiceBox" prefWidth="150.0" />
+                              <Label text="before expiry date" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+          </TitledPane>
+          <TitledPane animated="false" text="Servicing">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="27.0" prefWidth="566.0" spacing="5.0">
+                           <children>
+                              <Label text="Remind " />
+                              <TextField fx:id="servicingTextField" prefHeight="26.0" prefWidth="135.0" />
+                              <ChoiceBox fx:id="servicingTimeUnitChoiceBox" prefWidth="150.0" />
+                              <Label text="before next servicing date" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+          </TitledPane>
+          <TitledPane animated="false" text="Speed Governor Renewal">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="27.0" prefWidth="566.0" spacing="5.0">
+                           <children>
+                              <Label text="Remind " />
+                              <TextField fx:id="speedGovTextField" prefHeight="26.0" prefWidth="135.0" />
+                              <ChoiceBox fx:id="speedGovTimeUnitChoiceBox" prefWidth="150.0" />
+                              <Label text="before next renewal date" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+          </TitledPane>
+            <TitledPane animated="false" layoutX="10.0" layoutY="62.0" text="Annual Inspection">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="27.0" prefWidth="566.0" spacing="5.0">
+                           <children>
+                              <Label text="Remind " />
+                              <TextField fx:id="inspectionTextField" prefHeight="26.0" prefWidth="135.0" />
+                              <ChoiceBox fx:id="inspectionTimeUnitChoiceBox" prefWidth="150.0" />
+                              <Label text="before next inspection date" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" layoutX="10.0" layoutY="88.0" text="NTSA License Renewal">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="27.0" prefWidth="566.0" spacing="5.0">
+                           <children>
+                              <Label text="Remind " />
+                              <TextField fx:id="licenseTextField" prefHeight="26.0" prefWidth="135.0" />
+                              <ChoiceBox fx:id="licenseTimeUnitChoiceBox" prefWidth="150.0" />
+                              <Label text="before next renewal date" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+        </panes>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Accordion>
+      <HBox alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="590.0">
+         <children>
+            <Button fx:id="saveButton" mnemonicParsing="false" onAction="#onSaveSettings" styleClass="btn-success" text="Save Settings" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

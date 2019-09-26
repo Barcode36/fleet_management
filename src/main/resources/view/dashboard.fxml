@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<VBox fx:id="container" prefHeight="455.0" prefWidth="600.0" spacing="5.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.DashboardController">
+   <children>
+      <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#viewCurrentAssignments" styleClass="btn-default-outline" text="Manage Assignments" />
+            <Button mnemonicParsing="false" onAction="#onAssignEmployees" styleClass="btn-default-outline" text="Normal Operations" />
+         </children>
+         <styleClass>
+            <String fx:value="border-light-3" />
+            <String fx:value="padding-5" />
+         </styleClass>
+      </HBox>
+      <ScrollPane fitToHeight="true" fitToWidth="true" minHeight="200.0" styleClass="padding-5" VBox.vgrow="ALWAYS">
+         <content>
+            <FlowPane fx:id="flowPane" hgap="20.0" vgap="20.0" />
+         </content></ScrollPane>
+      <HBox prefHeight="255.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox alignment="TOP_CENTER" spacing="5.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label fx:id="incomeChartTitle" text="AUG INCOME">
+                     <styleClass>
+                        <String fx:value="fw-500" />
+                        <String fx:value="color-info-dark" />
+                     </styleClass>
+                  </Label>
+                  <LineChart fx:id="incomeLineChart" VBox.vgrow="ALWAYS">
+                    <xAxis>
+                      <CategoryAxis fx:id="incomeChartCategoryAxis" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="incomeChartNumberAxis" side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" layoutX="11.0" layoutY="11.0" spacing="5.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label fx:id="expenseChartTitle" text="AUG EXPENSES">
+                     <styleClass>
+                        <String fx:value="fw-500" />
+                        <String fx:value="color-info-dark" />
+                     </styleClass>
+                  </Label>
+                  <LineChart fx:id="expenseLineChart" VBox.vgrow="ALWAYS">
+                    <xAxis>
+                      <CategoryAxis fx:id="expenseChartCategoryAxis" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="expenseChartNumberAxis" side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" layoutX="111.0" layoutY="11.0" spacing="5.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="TOP 5 INCOME LAST 3 MONTHS">
+                     <styleClass>
+                        <String fx:value="fw-500" />
+                        <String fx:value="color-info-dark" />
+                     </styleClass>
+                  </Label>
+                  <BarChart fx:id="incomeRankBarChart" VBox.vgrow="ALWAYS">
+                    <xAxis>
+                      <CategoryAxis fx:id="incomeRankCategoryAxis" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="incomeRankNumberAxis" side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+               </children>
+            </VBox>
+         </children>
+         <styleClass>
+            <String fx:value="border-light-3" />
+            <String fx:value="padding-5" />
+         </styleClass>
+      </HBox>
+   </children>
+   <styleClass>
+      <String fx:value="scene" />
+      <String fx:value="padding-5" />
+   </styleClass>
+</VBox>

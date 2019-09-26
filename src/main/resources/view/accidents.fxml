@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import java.lang.String?>
+<VBox fx:id="container" alignment="TOP_RIGHT" prefHeight="400.0" prefWidth="600.0" spacing="5.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.AccidentsController">
+   <children>
+      <Button fx:id="addRecord" mnemonicParsing="false" onAction="#onNewRecord" styleClass="btn-info-outline" text="Record Accident" />
+      <Separator prefWidth="200.0" />
+      <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+        <columns>
+          <TableColumn fx:id="date" prefWidth="75.0" text="Date" />
+            <TableColumn fx:id="regNumber" prefWidth="75.0" text="Reg. Number" />
+            <TableColumn fx:id="description" prefWidth="75.0" text="Description" />
+            <TableColumn fx:id="driverDetails" prefWidth="75.0" text="Driver's Details" />
+            <TableColumn fx:id="policeStation" prefWidth="75.0" text="Police Station" />
+            <TableColumn fx:id="insurance" prefWidth="75.0" text="Reported to Insurance" />
+            <TableColumn fx:id="options" prefWidth="75.0" text="Options" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+   <styleClass>
+      <String fx:value="scene" />
+      <String fx:value="padding-5" />
+   </styleClass>
+</VBox>

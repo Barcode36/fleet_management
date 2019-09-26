@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<VBox fx:controller="main.java.controller.EditInsuranceController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="258.0" prefWidth="416.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" VBox.vgrow="ALWAYS">
+         <styleClass>
+            <String fx:value="border-light-3" />
+            <String fx:value="padding-5" />
+         </styleClass>
+         <children>
+            <Label text="Edit Insurance">
+               <styleClass>
+                  <String fx:value="color-primary-dark" />
+                  <String fx:value="fw-500" />
+                  <String fx:value="h6_5" />
+               </styleClass>
+            </Label>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <Label text="Name: " />
+                  <TextField onAction="#onSave" fx:id="editField" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="BOTTOM_RIGHT" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button onAction="#onSave" mnemonicParsing="false" styleClass="btn-success" text="Save Insurance" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <styleClass>
+      <String fx:value="scene" />
+      <String fx:value="padding-5" />
+   </styleClass>
+</VBox>

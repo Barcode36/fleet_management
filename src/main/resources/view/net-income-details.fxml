@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import java.lang.String?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="850.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.NetIncomeDetailsController">
+   <styleClass>
+      <String fx:value="padding-5" />
+      <String fx:value="scene" />
+   </styleClass>
+   <children>
+      <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+        <columns>
+          <TableColumn fx:id="date" prefWidth="75.0" text="Date" />
+          <TableColumn fx:id="regNumber" prefWidth="75.0" text="Reg Number" />
+            <TableColumn fx:id="details" prefWidth="75.0" text="Details" />
+            <TableColumn fx:id="income" prefWidth="75.0" text="Income" />
+            <TableColumn fx:id="expense" prefWidth="75.0" text="Expense" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>

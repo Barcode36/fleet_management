@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+
+<TabPane fx:id="tabPane" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.IncomeExpenseController">
+   <tabs>
+      <Tab closable="false" text="Edit Income/Expense">
+         <content>
+            <VBox fx:id="container" prefHeight="400.0" prefWidth="713.0" spacing="5.0" stylesheets="@../css/style.css">
+               <styleClass>
+                  <String fx:value="scene" />
+                  <String fx:value="padding-5" />
+               </styleClass>
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="590.0" spacing="5.0">
+                     <children>
+                        <Label styleClass="h7" text="Start Date" />
+                        <DatePicker fx:id="startDate" prefWidth="153.0" promptText="dd-mm-yyyy" />
+                        <Label layoutX="420.0" layoutY="19.0" styleClass="h7" text="End Date">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <DatePicker fx:id="endDate" layoutX="262.0" layoutY="14.0" prefWidth="153.0" promptText="dd-mm-yyyy" />
+                        <Button mnemonicParsing="false" onAction="#onSearchRecords" styleClass="fw-500" text="Search Records" />
+                        <Pane HBox.hgrow="ALWAYS" />
+                        <Button fx:id="addRecord" mnemonicParsing="false" onAction="#onNewRecord" styleClass="btn-info-outline" text="New Record" />
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="703.0">
+                     <children>
+                        <Label text="Select : " />
+                        <ChoiceBox fx:id="ledgerEntryTypeChoiceBox" prefWidth="150.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+      </Tab>
+      <Tab closable="false" text="Income Reports" />
+      <Tab closable="false" text="Expense Reports" />
+      <Tab closable="false" text="Net Income Reports" />
+      <Tab closable="false" text="Driver Peformance Reports" />
+      <Tab closable="false" text="Conductor Performance Reports" />
+   </tabs>
+   <styleClass>
+      <String fx:value="scene" />
+      <String fx:value="padding-5" />
+   </styleClass>
+</TabPane>

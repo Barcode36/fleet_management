@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<VBox fx:id="container" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="280.0" prefWidth="479.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.ControlPanelController">
+   <styleClass>
+      <String fx:value="scene" />
+      <String fx:value="padding-5" />
+   </styleClass>
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="446.0">
+         <children>
+            <Label styleClass="h7" text="Reg. No: " />
+            <Label fx:id="regNumberLabel" styleClass="fw-500" text="KAB 93092" wrapText="true" />
+         </children>
+      </HBox>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="border-light-3" VBox.vgrow="ALWAYS">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="195.0" layoutY="-11.0" prefHeight="200.0" prefWidth="100.0" spacing="5.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="-11.0">
+               <children>
+                  <Label text="Control Panel">
+                     <padding>
+                        <Insets left="3.0" right="3.0" />
+                     </padding>
+                     <styleClass>
+                        <String fx:value="bg-light" />
+                        <String fx:value="color-info-dark" />
+                        <String fx:value="fw-500" />
+                        <String fx:value="h7" />
+                     </styleClass>
+                  </Label>
+                  <FlowPane fx:id="controlPanel" alignment="CENTER" hgap="10.0" prefHeight="200.0" prefWidth="200.0" vgap="10.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button id="hire-out" fx:id="hireOut" mnemonicParsing="false" prefWidth="140.0" styleClass="btn-primary-outline" text="Hire Out" />
+                        <Button id="renew-license" fx:id="renewLicense" mnemonicParsing="false" prefWidth="140.0" styleClass="btn-primary-outline" text="NTSA License" />
+                        <Button id="operation_history" fx:id="operationHistory" layoutX="169.0" layoutY="160.0" mnemonicParsing="false" prefWidth="140.0" styleClass="btn-primary-outline" text="Operation History" />
+                        <Button id="record-income-expense" fx:id="recordIncomeExpense" mnemonicParsing="false" prefWidth="140.0" styleClass="btn-primary-outline" text="Income/Expense" />
+                        <Button id="edit-accident" fx:id="recordAccident" mnemonicParsing="false" prefWidth="140.0" styleClass="btn-primary-outline" text="Record Accident" />
+                        <Button id="servicing" fx:id="servicing" mnemonicParsing="false" prefWidth="140.0" styleClass="btn-primary-outline" text="Servicing" />
+                        <Button id="annual-inspection" fx:id="annualInspection" mnemonicParsing="false" prefWidth="140.0" styleClass="btn-primary-outline" text="Annual Inspection" />
+                        <Button id="renew-speed-gov" fx:id="renewSpeedGovernor" mnemonicParsing="false" prefWidth="140.0" styleClass="btn-primary-outline" text="Speed Governor" />
+                        <Button id="renew-insurance" fx:id="renewInsurance" mnemonicParsing="false" prefWidth="140.0" styleClass="btn-primary-outline" text="Renew Insurance" />
+                     </children>
+                  </FlowPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

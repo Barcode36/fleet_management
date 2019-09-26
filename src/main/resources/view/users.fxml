@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import java.lang.String?>
+<VBox fx:id="container" alignment="TOP_RIGHT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="5.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.ManageUsersController">
+   <styleClass>
+      <String fx:value="scene" />
+      <String fx:value="padding-5" />
+   </styleClass>
+   <children>
+      <Button fx:id="createUserBtn" mnemonicParsing="false" onAction="#onNewUser" styleClass="btn-info" text="New User" />
+      <Separator prefWidth="200.0" />
+      <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+        <columns>
+          <TableColumn fx:id="firstName" prefWidth="75.0" text="First Name" />
+          <TableColumn fx:id="lastName" prefWidth="75.0" text="Last Name" />
+            <TableColumn fx:id="userName" prefWidth="75.0" text="Username" />
+            <TableColumn fx:id="category" prefWidth="75.0" text="Category" />
+            <TableColumn fx:id="options" prefWidth="75.0" text="Options" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>

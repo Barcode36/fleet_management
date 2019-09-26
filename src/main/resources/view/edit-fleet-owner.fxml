@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+
+<VBox fx:id="container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="343.0"
+       prefWidth="585.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.EditFleetOwnerController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" VBox.vgrow="ALWAYS">
+         <styleClass>
+            <String fx:value="border-light-3" />
+            <String fx:value="padding-5" />
+         </styleClass>
+         <children>
+            <Label text="Fleet Owner Registration">
+               <styleClass>
+                  <String fx:value="fw-500" />
+                  <String fx:value="color-primary-dark" />
+                  <String fx:value="h6_5" />
+               </styleClass>
+            </Label>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="TOP_CENTER" fillHeight="false" prefHeight="218.0" prefWidth="563.0" spacing="10.0">
+               <children>
+                  <GridPane prefHeight="200.0" prefWidth="276.0" HBox.hgrow="ALWAYS">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="146.0" minWidth="10.0" prefWidth="86.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.0" minWidth="10.0" prefWidth="190.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label styleClass="fw-500" text="Middle Name" GridPane.rowIndex="2" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="3.0">
+                           <children>
+                              <Label styleClass="fw-500" text="National ID" />
+                              <Label layoutX="10.0" layoutY="52.0" styleClass="required" text="*" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="3.0" GridPane.rowIndex="1">
+                           <children>
+                              <Label styleClass="fw-500" text="First Name" />
+                              <Label layoutX="10.0" layoutY="52.0" styleClass="required" text="*" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="3.0" GridPane.rowIndex="3">
+                           <children>
+                              <Label styleClass="fw-500" text="Last Name" />
+                              <Label layoutX="10.0" layoutY="52.0" styleClass="required" text="*" />
+                           </children>
+                        </HBox>
+                        <TextField fx:id="nationalId" GridPane.columnIndex="1" />
+                        <TextField fx:id="firstName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="middleName" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="lastName" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+                  <GridPane prefHeight="146.0" prefWidth="277.0" HBox.hgrow="ALWAYS">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.0" minWidth="10.0" prefWidth="97.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="215.0" minWidth="10.0" prefWidth="180.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label styleClass="fw-500" text="Phone Number" />
+                        <TextField fx:id="phoneNumber" GridPane.columnIndex="1" />
+                        <Label styleClass="fw-500" text="Occupation" GridPane.rowIndex="1" />
+                        <TextField fx:id="occupation" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label styleClass="fw-500" text="Residence" GridPane.rowIndex="2" />
+                        <TextField fx:id="residence" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button onAction="#onUploadDocuments" mnemonicParsing="false" text="Upload Documents" />
+                  <Pane HBox.hgrow="ALWAYS" />
+                  <Button mnemonicParsing="false" onAction="#onSaveDetails" styleClass="btn-success" text="Save Details" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <styleClass>
+      <String fx:value="scene" />
+      <String fx:value="padding-5" />
+   </styleClass>
+</VBox>

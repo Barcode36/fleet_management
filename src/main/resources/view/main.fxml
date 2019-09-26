@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import java.lang.*?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="583.0" prefWidth="753.0" styleClass="scene" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.MainController">
+   <children>
+      <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="61.0" prefWidth="600.0" spacing="5.0">
+         <children>
+            <Pane HBox.hgrow="ALWAYS" />
+            <VBox alignment="CENTER">
+               <children>
+                  <Label text="QUANTUM">
+                     <styleClass>
+                        <String fx:value="fw-500" />
+                        <String fx:value="h5" />
+                        <String fx:value="color-accent" />
+                     </styleClass>
+                  </Label>
+                  <Label text="Fleet Management System">
+                     <styleClass>
+                        <String fx:value="color-accent" />
+                        <String fx:value="h6" />
+                     </styleClass>
+                  </Label>
+               </children>
+            </VBox>
+            <Pane HBox.hgrow="ALWAYS" />
+            <MenuButton fx:id="currentUserBtn" alignment="CENTER" mnemonicParsing="false" styleClass="btn-info" text="user" textFill="WHITE">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#onLogOut" text="Sign Out" />
+              </items>
+            </MenuButton>
+         </children>
+         <styleClass>
+            <String fx:value="bg-primary-darker" />
+            <String fx:value="padding-5" />
+         </styleClass>
+      </HBox>
+      <SplitPane dividerPositions="0.3" prefHeight="160.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+        <items>
+            <VBox fx:id="container" alignment="TOP_CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="322.0" prefWidth="225.0" spacing="2.0" styleClass="bg-primary-dark" SplitPane.resizableWithParent="false">
+               <children>
+                  <HBox id="dashboard" fx:id="dashboard" alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="196.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/desktop-mac-dashboard.png" />
+                           </image>
+                        </ImageView>
+                        <Label styleClass="color-white" text="Dashboard" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="bg-primary" />
+                        <String fx:value="padding-5" />
+                        <String fx:value="nav-item" />
+                     </styleClass>
+                  </HBox>
+                  <HBox id="vehicles-list" alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="196.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/bus-side-view.png" />
+                           </image>
+                        </ImageView>
+                        <Label styleClass="color-white" text="Fleet" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="bg-primary" />
+                        <String fx:value="padding-5" />
+                        <String fx:value="nav-item" />
+                     </styleClass>
+                  </HBox>
+                  <HBox id="income_expenses" alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="196.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/income.png" />
+                           </image>
+                        </ImageView>
+                        <Label styleClass="color-white" text="Income &amp; Expenses" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="bg-primary" />
+                        <String fx:value="padding-5" />
+                        <String fx:value="nav-item" />
+                     </styleClass>
+                  </HBox>
+                  <HBox id="employees" alignment="CENTER_LEFT" layoutX="10.0" layoutY="232.0" prefHeight="35.0" prefWidth="196.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/employees.png" />
+                           </image>
+                        </ImageView>
+                        <Label styleClass="color-white" text="Employees" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="bg-primary" />
+                        <String fx:value="padding-5" />
+                        <String fx:value="nav-item" />
+                     </styleClass>
+                  </HBox>
+                  <HBox id="accidents" alignment="CENTER_LEFT" layoutX="10.0" layoutY="232.0" prefHeight="35.0" prefWidth="196.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/car-collision.png" />
+                           </image>
+                        </ImageView>
+                        <Label styleClass="color-white" text="Accidents" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="bg-primary" />
+                        <String fx:value="padding-5" />
+                        <String fx:value="nav-item" />
+                     </styleClass>
+                  </HBox>
+                  <HBox id="insurance" alignment="CENTER_LEFT" layoutX="10.0" layoutY="121.0" prefHeight="35.0" prefWidth="196.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/income.png" />
+                           </image>
+                        </ImageView>
+                        <Label styleClass="color-white" text="Insurance" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="bg-primary" />
+                        <String fx:value="padding-5" />
+                        <String fx:value="nav-item" />
+                     </styleClass>
+                  </HBox>
+                  <HBox id="fleet-owners" alignment="CENTER_LEFT" layoutX="10.0" layoutY="306.0" prefHeight="35.0" prefWidth="196.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/income.png" />
+                           </image>
+                        </ImageView>
+                        <Label styleClass="color-white" text="Fleet Owners" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="bg-primary" />
+                        <String fx:value="padding-5" />
+                        <String fx:value="nav-item" />
+                     </styleClass>
+                  </HBox>
+                  <HBox id="reminders" fx:id="reminders" alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="35.0" prefWidth="196.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/notification.png" />
+                           </image>
+                        </ImageView>
+                        <Label styleClass="color-white" text="Reminders" />
+                        <StackPane fx:id="numRemindersPane" prefHeight="25.0" prefWidth="25.0" visible="false">
+                           <children>
+                              <Circle fill="#f44336" radius="10.5" stroke="#f44336" strokeMiterLimit="14.0" strokeType="INSIDE" />
+                              <Label fx:id="numRemindersLabel" text="99">
+                                 <styleClass>
+                                    <String fx:value="color-white" />
+                                    <String fx:value="fw-500" />
+                                 </styleClass>
+                              </Label>
+                           </children>
+                        </StackPane>
+                     </children>
+                     <styleClass>
+                        <String fx:value="bg-primary" />
+                        <String fx:value="padding-5" />
+                        <String fx:value="nav-item" />
+                     </styleClass>
+                  </HBox>
+                  <HBox id="users" alignment="CENTER_LEFT" layoutX="10.0" layoutY="306.0" prefHeight="35.0" prefWidth="196.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/account-multiple.png" />
+                           </image>
+                        </ImageView>
+                        <Label styleClass="color-white" text="System Users" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="bg-primary" />
+                        <String fx:value="padding-5" />
+                        <String fx:value="nav-item" />
+                     </styleClass>
+                  </HBox>
+               </children></VBox>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="323.0" prefWidth="406.0" />
+        </items>
+      </SplitPane>
+      <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="loginTime" text="Logged in since " />
+            <Pane HBox.hgrow="ALWAYS" />
+            <Label fx:id="version" styleClass="color-primary-darker" text="version" />
+         </children>
+         <styleClass>
+            <String fx:value="padding-5" />
+            <String fx:value="bg-grey" />
+         </styleClass></HBox>
+   </children>
+</VBox>
